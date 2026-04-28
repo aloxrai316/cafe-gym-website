@@ -1,0 +1,139 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+  padding: 20px;
+}
+
+.auth-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%);
+  padding: 50px 40px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.auth-branding h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.auth-branding > p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.auth-features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.auth-feature span {
+  font-size: 2rem;
+}
+
+.auth-feature strong {
+  font-size: 1rem;
+}
+
+.auth-right {
+  flex: 1;
+  background: white;
+  padding: 50px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.auth-form {
+  width: 100%;
+}
+
+.auth-form h2 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.auth-form > .text-light {
+  margin-bottom: 30px;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.auth-switch a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.demo-accounts {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.demo-accounts p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.demo-btn {
+  padding: 6px 14px;
+  margin: 4px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  font-size: 0.8rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.demo-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(233,69,96,0.05);
+}
+
+@media (max-width: 768px) {
+  .auth-container { flex-direction: column; }
+  .auth-left { padding: 30px 24px; }
+  .auth-right { padding: 30px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}
