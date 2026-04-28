@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const path = require('path'); // ✅ ADDED
 const connectDB = require('./config/db');
 const errorHandler = require('./middleware/errorHandler');
 
@@ -38,18 +37,6 @@ app.get('/api/health', (req, res) => {
     message: 'FitBite API is running',
     timestamp: new Date()
   });
-});
-
-// ===============================
-// ✅ FRONTEND SERVING (IMPORTANT)
-// ===============================
-
-// Serve React build folder
-app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-// Catch-all route (must be after API routes)
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
 });
 
 // Error handler (KEEP LAST)
